@@ -27,9 +27,14 @@
         <module>Java_1.10_NewFeatures</module>
     </modules>
 
-    <!-- 解决Language Level版本问题 -->
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <!-- 解决字符集问题 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>         <!-- 源码字符集 -->
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding> <!-- 输出字符集 -->
+
+        <!-- 解决 Language Level 版本问题 -->
+        <java.version>21</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 </project>
